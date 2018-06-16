@@ -10,6 +10,7 @@ def choose_option():
     check_option = False
     print('[1] - Selecionar Projeto')
     print('[2] - Criar Projeto')
+    print('[3] - Sair')
     print('----------------------------------------')
 
     while not check_option:
@@ -19,6 +20,9 @@ def choose_option():
                 return show_projects()
             elif option == 2:
                 return create_project()
+            elif option == 3:
+                print('----------------------------------------')
+                sys.exit()
             else:
                 print('\033[31m' + '%s não é uma opção válida!' % option + '\033[0m')
         except ValueError as e:
